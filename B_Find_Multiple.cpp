@@ -6,19 +6,20 @@ int main()
     int a, b, c;
     cin >> a >> b >> c;
 
-    int val = 2 * c;
-
-    if (val >= a && val <= b)
+    for (int i = 1; ; i++)
     {
-        for (int i = a; i <= b; i++)
+        int mul = c * i;
+        if (mul >= a && mul <= b)
         {
-            if (i == val)
-            {
-                cout << i << endl;
-            }
+            cout << mul << endl;
+            break;
+        }
+
+        if (mul > b)
+        {
+            cout << -1 << endl;
+            break;
         }
     }
-    else
-        cout << -1 << endl;
     return 0;
 }
